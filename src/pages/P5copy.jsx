@@ -8,9 +8,9 @@ const P5copy = () => {
     /* 인스턴스에 이미지 부르기 */
     img = p5.loadImage("../../img/ifJPbUm9XMsQdt7AQAets-1200-80.jpg");
   };
-  const setup = (p5) => {
+  const setup = (p5, canvasParentRef) => {
     /* 캔버스 생성, 이미지의 너비는 유지, 높이 * 2 */
-    p5.createCanvas(img.width, img.height * 2);
+    p5.createCanvas(500, 1000).parent(canvasParentRef);
     /* newImg에 할당, 이미지 너비와 높이 만큼 */
     newImg = p5.createImage(img.width, img.height);
     /* 배경색 지정 */
@@ -39,7 +39,7 @@ const P5copy = () => {
       newImg.pixels[i + 3] = img.pixels[i + 3];
     }
     newImg.updatePixels();
-    p5.image(newImg, 0, img.height);
+    p5.image(newImg, 0, 500);
   }
 
   return (
