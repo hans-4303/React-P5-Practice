@@ -37,12 +37,8 @@ const P5copy = () => {
     console.log(img.pixels[3]);
     console.log(img.pixels.length / 4);
     for (let i = 0; i < img.width * img.height * 4; i += 4) {
-      newImg.pixels[i + 0] = img.pixels[i + 0];
-      newImg.pixels[i + 1] = img.pixels[i + 1];
-      newImg.pixels[i + 2] = img.pixels[i + 2];
-      newImg.pixels[i + 3] = img.pixels[i + 3];
       /* 임시 봄 웜 톤 체크 */
-      /* if (
+      if (
         img.pixels[i + 0] >= 210 &&
         100 < img.pixels[i + 1] &&
         img.pixels[i + 1] <= 170 &&
@@ -50,6 +46,17 @@ const P5copy = () => {
         img.pixels[i + 2] <= 170
       ) {
         testSpring++;
+        console.log(testSpring);
+      }
+      if (
+        img.pixels[i + 0] >= 210 &&
+        100 < img.pixels[i + 2] &&
+        img.pixels[i + 2] <= 170 &&
+        100 < img.pixels[i + 1] &&
+        img.pixels[i + 1] <= 170
+      ) {
+        testSpring++;
+        console.log(testSpring);
       }
       if (
         img.pixels[i + 1] >= 210 &&
@@ -59,6 +66,17 @@ const P5copy = () => {
         img.pixels[i + 2] <= 170
       ) {
         testSpring++;
+        console.log(testSpring);
+      }
+      if (
+        img.pixels[i + 1] >= 210 &&
+        100 < img.pixels[i + 2] &&
+        img.pixels[i + 2] <= 170 &&
+        100 < img.pixels[i + 0] &&
+        img.pixels[i + 0] <= 170
+      ) {
+        testSpring++;
+        console.log(testSpring);
       }
       if (
         img.pixels[i + 2] >= 210 &&
@@ -68,9 +86,20 @@ const P5copy = () => {
         img.pixels[i + 0] <= 170
       ) {
         testSpring++;
-      } */
+        console.log(testSpring);
+      }
+      if (
+        img.pixels[i + 2] >= 210 &&
+        100 < img.pixels[i + 0] &&
+        img.pixels[i + 0] <= 170 &&
+        100 < img.pixels[i + 1] &&
+        img.pixels[i + 1] <= 170
+      ) {
+        testSpring++;
+        console.log(testSpring);
+      }
       /* 임시 여름 쿨 톤 체크 */
-      /* if (
+      if (
         img.pixels[i + 0] >= 210 &&
         170 < img.pixels[i + 1] &&
         img.pixels[i + 1] <= 210 &&
@@ -78,6 +107,17 @@ const P5copy = () => {
         img.pixels[i + 2] <= 210
       ) {
         testSummer++;
+        console.log(testSummer);
+      }
+      if (
+        img.pixels[i + 0] >= 210 &&
+        170 < img.pixels[i + 2] &&
+        img.pixels[i + 2] <= 210 &&
+        170 < img.pixels[i + 1] &&
+        img.pixels[i + 1] <= 210
+      ) {
+        testSummer++;
+        console.log(testSummer);
       }
       if (
         img.pixels[i + 1] >= 210 &&
@@ -87,6 +127,17 @@ const P5copy = () => {
         img.pixels[i + 2] <= 210
       ) {
         testSummer++;
+        console.log(testSummer);
+      }
+      if (
+        img.pixels[i + 1] >= 210 &&
+        170 < img.pixels[i + 2] &&
+        img.pixels[i + 2] <= 210 &&
+        170 < img.pixels[i + 0] &&
+        img.pixels[i + 0] <= 210
+      ) {
+        testSummer++;
+        console.log(testSummer);
       }
       if (
         img.pixels[i + 2] >= 210 &&
@@ -96,7 +147,18 @@ const P5copy = () => {
         img.pixels[i + 0] <= 210
       ) {
         testSummer++;
-      } */
+        console.log(testSummer);
+      }
+      if (
+        img.pixels[i + 2] >= 210 &&
+        170 < img.pixels[i + 0] &&
+        img.pixels[i + 0] <= 210 &&
+        170 < img.pixels[i + 1] &&
+        img.pixels[i + 1] <= 210
+      ) {
+        testSummer++;
+        console.log(testSummer);
+      }
       /* 임시 가을 웜 체크 */
       if (
         110 <= img.pixels[i + 0] &&
@@ -107,6 +169,7 @@ const P5copy = () => {
         img.pixels[i + 2] <= 45
       ) {
         testAutumn++;
+        console.log(testAutumn);
       }
       if (
         110 <= img.pixels[i + 0] &&
@@ -117,6 +180,7 @@ const P5copy = () => {
         img.pixels[i + 1] <= 45
       ) {
         testAutumn++;
+        console.log(testAutumn);
       }
       if (
         110 <= img.pixels[i + 1] &&
@@ -127,6 +191,7 @@ const P5copy = () => {
         img.pixels[i + 2] <= 45
       ) {
         testAutumn++;
+        console.log(testAutumn);
       }
       if (
         110 <= img.pixels[i + 1] &&
@@ -137,6 +202,7 @@ const P5copy = () => {
         img.pixels[i + 0] <= 45
       ) {
         testAutumn++;
+        console.log(testAutumn);
       }
       if (
         110 <= img.pixels[i + 2] &&
@@ -147,6 +213,7 @@ const P5copy = () => {
         img.pixels[i + 1] <= 45
       ) {
         testAutumn++;
+        console.log(testAutumn);
       }
       if (
         110 <= img.pixels[i + 2] &&
@@ -157,6 +224,7 @@ const P5copy = () => {
         img.pixels[i + 0] <= 45
       ) {
         testAutumn++;
+        console.log(testAutumn);
       }
       /* 임시 겨울 쿨 체크 */
       if (
@@ -168,6 +236,7 @@ const P5copy = () => {
         img.pixels[i + 2] <= 85
       ) {
         testWinter++;
+        console.log(testWinter);
       }
       if (
         110 <= img.pixels[i + 0] &&
@@ -178,6 +247,7 @@ const P5copy = () => {
         img.pixels[i + 1] <= 85
       ) {
         testWinter++;
+        console.log(testWinter);
       }
       if (
         110 <= img.pixels[i + 1] &&
@@ -188,6 +258,7 @@ const P5copy = () => {
         img.pixels[i + 2] <= 85
       ) {
         testWinter++;
+        console.log(testWinter);
       }
       if (
         110 <= img.pixels[i + 1] &&
@@ -198,6 +269,7 @@ const P5copy = () => {
         img.pixels[i + 0] <= 85
       ) {
         testWinter++;
+        console.log(testWinter);
       }
       if (
         110 <= img.pixels[i + 2] &&
@@ -208,6 +280,7 @@ const P5copy = () => {
         img.pixels[i + 1] <= 85
       ) {
         testWinter++;
+        console.log(testWinter);
       }
       if (
         110 <= img.pixels[i + 2] &&
@@ -218,14 +291,21 @@ const P5copy = () => {
         img.pixels[i + 0] <= 85
       ) {
         testWinter++;
+        console.log(testWinter);
       }
+    }
+    for (let i = 0; i < img.width * img.height * 4; i += 4) {
+      newImg.pixels[i + 0] = img.pixels[i + 0];
+      newImg.pixels[i + 1] = img.pixels[i + 1];
+      newImg.pixels[i + 2] = img.pixels[i + 2];
+      newImg.pixels[i + 3] = img.pixels[i + 3];
     }
     newImg.updatePixels();
     p5.image(newImg, 0, img.height);
-    console.log(testAutumn, testWinter);
+    console.log(testSpring, testSummer, testAutumn, testWinter);
   };
 
-    /* 임시 봄 픽셀은 ${testSpring}, 비율은 ${
+  /* 임시 봄 픽셀은 ${testSpring}, 비율은 ${
         (testSpring / (img.pixels.length / 4)) * 100
       } %,\n임시 여름 쿨 픽셀은 ${testSummer}, 비율은 ${
         (testSummer / (img.pixels.length / 4)) * 100
